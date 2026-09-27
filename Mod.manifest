@@ -1,0 +1,43 @@
+[mod_information]
+
+name="Skin Selector"
+id="wt.SkinSelector"
+description="SKIN_SELECTOR_DESC"
+brief="SKIN_SELECTOR_BRIEF"
+author="WT"
+credits=PoolStringArray( "Alexandragon - original idea" )
+
+[version]
+
+version_major=1
+version_minor=0
+version_bugfix=0
+
+[tags]
+
+TAG_QOL={
+"type": "bool",
+"value": true
+}
+
+[links]
+
+HEVLIB_GITHUB={
+"URL": "https://github.com/1-WT-1/SkinSelector"
+}
+HEVLIB_DISCORD={
+"URL": "https://discord.com/channels/426287934870781952/1553880652288495736"
+}
+HEVLIB_DONATIONS={
+"URL": "https://ko-fi.com/1_wt_1"
+}
+
+[manifest_definitions]
+
+manifest_version=2.2
+dependancy_mod_ids=[ {
+"blocking": true,
+"mod_id": "hev.LIBRARY"
+} ]
+manifest_url="https://raw.githubusercontent.com/1-WT-1/SkinSelector/refs/heads/main/Mod.manifest"
+changelog_path="changelog.txt"

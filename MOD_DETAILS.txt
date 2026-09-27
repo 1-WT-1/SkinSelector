@@ -1,0 +1,22 @@
+;MOD_ID|wt.SkinSelector
+;MOD_NAME|Skin Selector
+;AUTHOR|WT
+;MOD_ZIP_NAME|SkinSelector.zip
+
+[center][b]Skin Selector[/b][/center]
+
+Apply custom paint jobs to individual ships in your fleet.
+
+[center][u]Features:[/u][/center]
+
+ * [b]Per-Ship Skins[/b] - Assign different paint jobs to each ship, even for ships of the same model.
+ * [b]Dedicated Folders[/b] - Store PNG skins in [code]user://skins/<model>/[/code].
+
+[center][u]How to Add Skins:[/u][/center]
+
+ 1. Open the Tuning menu at Enceladus Prime.
+ 2. Select the [b]Paint[/b] row.
+ 3. Click the [b]Folder[/b] button to open the skin folder for your ship model.
+ 4. Copy your custom [code].png[/code] skin files into this folder.
+ 5. Click the [b]Refresh[/b] button in the Tuning menu to update the list.
+ 6. Select your skin from the dropdown list.

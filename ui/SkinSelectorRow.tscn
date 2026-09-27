@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://menu/MenuTheme.tres" type="Theme" id=1]
+[ext_resource path="res://SkinSelector/ui/SkinSelectorRow.gd" type="Script" id=2]
+[ext_resource path="res://SmoothScrollTo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enceladus/Subwindow.theme" type="Theme" id=5]
+[ext_resource path="res://enceladus/Flicker.tscn" type="PackedScene" id=6]
+
+[node name="SkinSelectorRow" type="VBoxContainer"]
+margin_right = 1160.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Header" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1160.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="Header"]
+margin_right = 1160.0
+margin_bottom = 14.0
+text = "SKIN_SELECTOR_TITLE"
+align = 1
+
+[node name="Flicker" parent="Header" instance=ExtResource( 6 )]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 18.0
+margin_right = 1160.0
+margin_bottom = 59.0
+grow_horizontal = 2
+
+[node name="Label" type="Button" parent="HBoxContainer"]
+margin_right = 350.0
+margin_bottom = 41.0
+focus_mode = 1
+size_flags_horizontal = 3
+text = "SKIN_SELECTOR_HULL_PAINT"
+flat = true
+clip_text = true
+align = 0
+
+[node name="SmoothScrollTo" parent="HBoxContainer/Label" instance=ExtResource( 3 )]
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer"]
+margin_left = 354.0
+margin_right = 930.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+flat = true
+align = 0
+
+[node name="SmoothScrollTo" parent="HBoxContainer/OptionButton" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="RefreshButton" type="Button" parent="HBoxContainer"]
+margin_left = 934.0
+margin_right = 1040.0
+margin_bottom = 41.0
+text = "SKIN_SELECTOR_REFRESH"
+flat = true
+
+[node name="SmoothScrollTo" parent="HBoxContainer/RefreshButton" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="FolderButton" type="Button" parent="HBoxContainer"]
+margin_left = 1044.0
+margin_right = 1160.0
+margin_bottom = 41.0
+text = "SKIN_SELECTOR_OPEN_FOLDER"
+flat = true
+
+[node name="SmoothScrollTo" parent="HBoxContainer/FolderButton" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="HoverPreviewWindow" type="PopupPanel" parent="."]
+visible = false
+margin_right = 240.0
+margin_bottom = 340.0
+mouse_filter = 2
+theme = ExtResource( 5 )
+
+[node name="VBox" type="VBoxContainer" parent="HoverPreviewWindow"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 235.0
+margin_bottom = 335.0
+mouse_filter = 2
+
+[node name="PreviewTitle" type="Label" parent="HoverPreviewWindow/VBox"]
+margin_right = 230.0
+margin_bottom = 14.0
+text = "SKIN_NAME"
+align = 1
+clip_text = true
+mouse_filter = 2
+
+[node name="PreviewDim" type="Label" parent="HoverPreviewWindow/VBox"]
+modulate = Color( 0.7, 0.7, 0.7, 1 )
+margin_top = 18.0
+margin_right = 230.0
+margin_bottom = 32.0
+text = "256 x 512 px"
+align = 1
+mouse_filter = 2
+
+[node name="PreviewTexture" type="TextureRect" parent="HoverPreviewWindow/VBox"]
+margin_top = 36.0
+margin_right = 230.0
+margin_bottom = 330.0
+rect_min_size = Vector2( 220, 280 )
+size_flags_vertical = 3
+expand = true
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="PlaySoundsOnTheseButtons" parent="." instance=ExtResource( 4 )]
